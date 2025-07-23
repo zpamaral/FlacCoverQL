@@ -60,6 +60,8 @@
 <dict>
   <key>NSExtensionPointIdentifier</key>
   <string>com.apple.quicklook.preview</string>
+  <key>NSExtensionPrincipalClass</key>
+  <string>FlacCoverQL</string>
 </dict>
 
   <key>CFBundleDocumentTypes</key>
