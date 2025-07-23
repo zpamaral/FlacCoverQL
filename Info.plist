@@ -26,6 +26,13 @@
   <key>LSMinimumSystemVersion</key>
   <string>12.7</string>
 
+<key>QLPreviewHandlers</key>
+<array>
+    <string>org.xiph.flac</string>
+</array>
+<key>QLNeedsToBeRunInMainThread</key>
+<true/>
+
   <key>UTImportedTypeDeclarations</key>
   <array>
     <dict>
