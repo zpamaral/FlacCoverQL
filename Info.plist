@@ -48,11 +48,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.quicklook.preview</string>
-	</dict>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
