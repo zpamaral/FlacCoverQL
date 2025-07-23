@@ -22,6 +22,8 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>12.7</string>
+	<key>QLGeneratorEnabled</key>
+	<true/>
 	<key>QLPreviewGenerators</key>
 	<array>
 		<dict>
