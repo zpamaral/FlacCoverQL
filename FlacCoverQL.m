@@ -1,6 +1,7 @@
 #import "FlacCoverQL.h"
 #import <QuickLook/QuickLook.h>
 #import <CoreServices/CoreServices.h>
+#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
 static NSData *ExtractFirstPicture(NSData *data);
 
@@ -17,13 +18,22 @@ OSStatus GeneratePreviewForURL(void *thisInterface,
         NSData *imageData = ExtractFirstPicture(fileData);
         if (!imageData) return noErr;
 
-        CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType,
-                                                                CFSTR("image/png"), NULL);
+        CFStringRef uti = NULL;
+        if (@available(macOS 11.0, *)) {
+            uti = (__bridge CFStringRef)[UTType PNG].identifier;
+        } else {
+            uti = UTTypeCreatePreferredIdentifierForTag(UTTagClassMIMEType,
+                                                       CFSTR("image/png"), NULL);
+        }
         QLPreviewRequestSetDataRepresentation(preview,
                                               (__bridge CFDataRef)imageData,
                                               uti,
                                               NULL);
-        if (uti) CFRelease(uti);
+        if (@available(macOS 11.0, *)) {
+            // no-op
+        } else {
+            if (uti) CFRelease(uti);
+        }
     }
     return noErr;
 }
@@ -54,7 +64,7 @@ static NSData *ExtractFirstPicture(NSData *data) {
             const uint8_t *p = bytes + offset;
             NSUInteger pos = 0;
             if (pos + 4 > blockLen) return nil;
-            uint32_t pictureType = ReadUInt32BE(p+pos); pos += 4; // unused
+            pos += 4; // skip picture type
             if (pos + 4 > blockLen) return nil;
             uint32_t mimeLen = ReadUInt32BE(p+pos); pos += 4;
             if (pos + mimeLen > blockLen) return nil;
