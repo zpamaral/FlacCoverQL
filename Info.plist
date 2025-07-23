@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>CFBundleExecutable</key>
-	<string>FlacCoverQL</string>
 	<key>CFBundleIdentifier</key>
 	<string>JPSdA.FlacCoverQL</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,13 +20,18 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-		<key>LSMinimumSystemVersion</key>
-		<string>12.7</string>
-		<key>QLPreviewHandlers</key>
-		<array>
-			<string>org.xiph.flac</string>
-		</array>
-		<key>QLNeedsToBeRunInMainThread</key>
+	<key>LSMinimumSystemVersion</key>
+	<string>12.7</string>
+	<key>QLPreviewGenerators</key>
+	<array>
+		<dict>
+			<key>QLGeneratorContentTypes</key>
+			<array>
+				<string>org.xiph.flac</string>
+			</array>
+		</dict>
+	</array>
+	<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
@@ -49,19 +52,6 @@
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.audio</string>
-			</array>
-		</dict>
-	</array>
-	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>FLAC Audio</string>
-			<key>CFBundleTypeRole</key>
-			<string>QLGenerator</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>org.xiph.flac</string>
 			</array>
 		</dict>
 	</array>
