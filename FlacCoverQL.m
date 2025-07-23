@@ -20,7 +20,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface,
 
         CFStringRef uti = NULL;
         if (@available(macOS 11.0, *)) {
-            uti = (__bridge CFStringRef)[UTType PNG].identifier;
+            uti = (__bridge CFStringRef)UTTypePNG.identifier;
         } else {
             uti = UTTypeCreatePreferredIdentifierForTag(UTTagClassMIMEType,
                                                        CFSTR("image/png"), NULL);
