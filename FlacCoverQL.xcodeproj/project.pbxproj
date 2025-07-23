@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1F3D95E72E3140DB00E16BD5 /* FlacCoverQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */; };
-		1F3D95F32E31507200E16BD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D95F22E31507200E16BD5 /* Info.plist */; };
+		1F3D95F52E31612500E16BD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D95F42E31612400E16BD5 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F3D95DC2E313F0700E16BD5 /* FlacCoverQL.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlacCoverQL.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlacCoverQL.m; sourceTree = "<group>"; };
 		1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlacCoverQL.h; sourceTree = "<group>"; };
-		1F3D95F22E31507200E16BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F3D95F42E31612400E16BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 		1F3D95D32E313F0700E16BD5 = {
 			isa = PBXGroup;
 			children = (
-				1F3D95F22E31507200E16BD5 /* Info.plist */,
+				1F3D95F42E31612400E16BD5 /* Info.plist */,
 				1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */,
 				1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */,
 				1F3D95DD2E313F0700E16BD5 /* Products */,
@@ -104,7 +104,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3D95F32E31507200E16BD5 /* Info.plist in Resources */,
+				1F3D95F52E31612500E16BD5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
