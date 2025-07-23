@@ -22,9 +22,13 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>12.7</string>
-	<key>QLNeedsToBeRunInMainThread</key>
+		<key>LSMinimumSystemVersion</key>
+		<string>12.7</string>
+		<key>QLPreviewHandlers</key>
+		<array>
+			<string>org.xiph.flac</string>
+		</array>
+		<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
@@ -54,7 +58,7 @@
 			<key>CFBundleTypeName</key>
 			<string>FLAC Audio</string>
 			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
+			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>org.xiph.flac</string>
