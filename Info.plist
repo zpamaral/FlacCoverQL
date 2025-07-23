@@ -26,8 +26,8 @@
   <key>LSMinimumSystemVersion</key>
   <string>12.7</string>
 
-<key>QLNeedsToBeRunInMainThread</key>
-<true/>
+  <key>QLNeedsToBeRunInMainThread</key>
+  <true/>
 
   <key>UTImportedTypeDeclarations</key>
   <array>
@@ -52,13 +52,11 @@
     </dict>
   </array>
 
-<key>NSExtension</key>
-<dict>
-  <key>NSExtensionPointIdentifier</key>
-  <string>com.apple.quicklook.preview</string>
-  <key>NSExtensionPrincipalClass</key>
-  <string>FlacCoverQL</string>
-</dict>
+  <key>NSExtension</key>
+  <dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.quicklook.preview</string>
+  </dict>
 
   <key>CFBundleDocumentTypes</key>
   <array>
