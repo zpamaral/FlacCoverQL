@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<key>UTExportedTypeDeclarations</key>
+<array>
+  <dict>
+    <key>UTTypeIdentifier</key>
+    <string>org.xiph.flac</string>
+    <key>UTTypeDescription</key>
+    <string>FLAC Audio File</string>
+    <key>UTTypeConformsTo</key>
+    <array>
+      <string>public.audio</string>
+    </array>
+    <key>UTTypeTagSpecification</key>
+    <dict>
+      <key>public.filename-extension</key>
+      <array>
+        <string>flac</string>
+      </array>
+      <key>public.mime-type</key>
+      <array>
+        <string>audio/flac</string>
+      </array>
+    </dict>
+  </dict>
+</array>
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleExecutable</key>
+  <string>FlacCoverQL</string>
+  <key>CFBundleIdentifier</key>
+  <string>JPSdA.FlacCoverQL</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>FlacCoverQL</string>
+  <key>CFBundlePackageType</key>
+  <string>QLGEN</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSupportedPlatforms</key>
+  <array>
+    <string>MacOSX</string>
+  </array>
+  <key>CFBundleVersion</key>
+  <string>1</string>
+  <key>LSMinimumSystemVersion</key>
+  <string>12.7</string>
+
+  <key>UTImportedTypeDeclarations</key>
+  <array>
+    <dict>
+      <key>UTTypeIdentifier</key>
+      <string>org.xiph.flac</string>
+      <key>UTTypeTagSpecification</key>
+      <dict>
+        <key>public.filename-extension</key>
+        <array>
+          <string>flac</string>
+        </array>
+        <key>public.mime-type</key>
+        <string>audio/flac</string>
+      </dict>
+      <key>UTTypeDescription</key>
+      <string>FLAC Audio</string>
+      <key>UTTypeConformsTo</key>
+      <array>
+        <string>public.audio</string>
+      </array>
+    </dict>
+  </array>
+
+  <key>CFBundleDocumentTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleTypeName</key>
+      <string>FLAC Audio</string>
+      <key>CFBundleTypeRole</key>
+      <string>QLGenerator</string>
+      <key>LSItemContentTypes</key>
+      <array>
+        <string>org.xiph.flac</string>
+      </array>
+    </dict>
+  </array>
+</dict>
+</plist>
