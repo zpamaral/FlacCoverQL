@@ -64,8 +64,8 @@ static NSData *ExtractFirstPicture(NSData *data) {
             uint32_t descLen = ReadUInt32BE(p+pos); pos += 4;
             if (pos + descLen > blockLen) return nil;
             pos += descLen; // skip description
-            if (pos + 20 > blockLen) return nil; // skip width/height/depth/colors
-            pos += 20;
+            if (pos + 16 > blockLen) return nil; // skip width/height/depth/colors
+            pos += 16;
             if (pos + 4 > blockLen) return nil;
             uint32_t dataLen = ReadUInt32BE(p+pos); pos += 4;
             if (pos + dataLen > blockLen) return nil;
