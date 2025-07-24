@@ -73,6 +73,10 @@
 		<string>org.xiph.flac</string>
 	</array>
 	</dict>
+	<key>QLThumbnailGenerators</key>
+	<array>
+		<string>org.xiph.flac</string>
+	</array>
 	<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>UTImportedTypeDeclarations</key>
