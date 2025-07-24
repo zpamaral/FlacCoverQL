@@ -2,6 +2,8 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreServices/CoreServices.h>
 #include <QuickLook/QuickLook.h>
+#include <stdlib.h>
+#include <string.h>
 #include "FlacCoverQL.h"
 
 #define PLUGIN_ID CFSTR("EF6CEA3B-7D09-4793-BF91-DB6B0B538CEA")
@@ -57,7 +59,7 @@ static void DeallocPlugin(FlacQLPlugin *instance)
 static HRESULT PluginQueryInterface(void *thisInstance, REFIID iid, LPVOID *ppv)
 {
     CFUUIDRef interfaceID = CFUUIDCreateFromUUIDBytes(kCFAllocatorDefault, iid);
-    BOOL requested = CFEqual(interfaceID, kQLGeneratorCallbacksInterfaceID);
+    Boolean requested = CFEqual(interfaceID, kQLGeneratorCallbacksInterfaceID);
     CFRelease(interfaceID);
 
     if (requested) {

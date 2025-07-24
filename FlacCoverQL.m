@@ -8,8 +8,10 @@ static NSDictionary *ExtractFirstPicture(NSData *data);
 OSStatus GeneratePreviewForURL(void *thisInterface,
                                QLPreviewRequestRef preview,
                                CFURLRef url,
+                               CFStringRef contentTypeUTI,
                                CFDictionaryRef options)
 {
+    (void)contentTypeUTI;
     @autoreleasepool {
         NSURL *nsURL = (__bridge NSURL *)url;
         NSData *fileData = [NSData dataWithContentsOfURL:nsURL];
