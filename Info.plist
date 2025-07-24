@@ -75,5 +75,27 @@
 			</array>
 		</dict>
 	</array>
+<key>UTImportedTypeDeclarations</key>
+<array>
+<dict>
+	<key>UTTypeIdentifier</key>
+	<string>com.jpsda.flaccapa</string>
+	<key>UTTypeDescription</key>
+	<string>FLAC com capa (teste)</string>
+	<key>UTTypeTagSpecification</key>
+	<dict>
+	<key>public.filename-extension</key>
+	<array>
+		<string>flaccapa</string>
+	</array>
+	<key>public.mime-type</key>
+	<string>audio/x-flaccapa</string>
+	</dict>
+	<key>UTTypeConformsTo</key>
+	<array>
+	<string>public.audio</string>
+	</array>
+</dict>
+</array>
 </dict>
 </plist>
