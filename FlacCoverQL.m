@@ -2,6 +2,7 @@
 #import <QuickLook/QuickLook.h>
 #import <CoreServices/CoreServices.h>
 #import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
+#include <string.h>
 
 static NSDictionary *ExtractFirstPicture(NSData *data);
 
