@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F3D95E72E3140DB00E16BD5 /* FlacCoverQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */; };
+                1F3D95E72E3140DB00E16BD5 /* FlacCoverQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */; };
+                A4824A4C7C94589B4997F003 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 274E1CA2200585C7121D9C1F /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F3D95DC2E313F0700E16BD5 /* FlacCoverQL.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlacCoverQL.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlacCoverQL.m; sourceTree = "<group>"; };
-		1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlacCoverQL.h; sourceTree = "<group>"; };
-		1F3D95F42E31612400E16BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+                1F3D95DC2E313F0700E16BD5 /* FlacCoverQL.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlacCoverQL.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+                1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlacCoverQL.m; sourceTree = "<group>"; };
+                1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlacCoverQL.h; sourceTree = "<group>"; };
+                274E1CA2200585C7121D9C1F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+                1F3D95F42E31612400E16BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,16 +30,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F3D95D32E313F0700E16BD5 = {
-			isa = PBXGroup;
-			children = (
-				1F3D95F42E31612400E16BD5 /* Info.plist */,
-				1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */,
-				1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */,
-				1F3D95DD2E313F0700E16BD5 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
+                1F3D95D32E313F0700E16BD5 = {
+                        isa = PBXGroup;
+                        children = (
+                                1F3D95F42E31612400E16BD5 /* Info.plist */,
+                                1F3D95E52E3140DB00E16BD5 /* FlacCoverQL.h */,
+                                1F3D95E42E3140DB00E16BD5 /* FlacCoverQL.m */,
+                                274E1CA2200585C7121D9C1F /* main.c */,
+                                1F3D95DD2E313F0700E16BD5 /* Products */,
+                        );
+                        sourceTree = "<group>";
+                };
 		1F3D95DD2E313F0700E16BD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +115,12 @@
 		1F3D95D82E313F0700E16BD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-				1F3D95E72E3140DB00E16BD5 /* FlacCoverQL.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                        files = (
+                                1F3D95E72E3140DB00E16BD5 /* FlacCoverQL.m in Sources */,
+                                A4824A4C7C94589B4997F003 /* main.c in Sources */,
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
