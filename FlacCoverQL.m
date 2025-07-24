@@ -3,6 +3,8 @@
 #import <CoreServices/CoreServices.h>
 #import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 #include <string.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <ImageIO/ImageIO.h>
 
 static NSDictionary *ExtractFirstPicture(NSData *data);
 
@@ -12,7 +14,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface,
                                CFStringRef contentTypeUTI,
                                CFDictionaryRef options)
 {
-    (void)contentTypeUTI;
+    (void)thisInterface; (void)contentTypeUTI; (void)options;
+
     @autoreleasepool {
         NSURL *nsURL = (__bridge NSURL *)url;
         NSData *fileData = [NSData dataWithContentsOfURL:nsURL];
@@ -22,24 +25,27 @@ OSStatus GeneratePreviewForURL(void *thisInterface,
         if (!pic) return noErr;
 
         NSData *imageData = pic[@"data"];
-        NSString *mimeType = pic[@"mime"];
-        if (!imageData || !mimeType) return noErr;
+        if (!imageData) return noErr;
 
-        // Obter o UTI com base no MIME
-        CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(
-            kUTTagClassMIMEType,
-            (__bridge CFStringRef)mimeType,
-            NULL
-        );
-        if (!uti) return noErr;
+        // Criar CGImage a partir do NSData
+        CGImageSourceRef src = CGImageSourceCreateWithData((__bridge CFDataRef)imageData, NULL);
+        if (!src) return noErr;
 
-        QLPreviewRequestSetDataRepresentation(preview,
-                                              (__bridge CFDataRef)imageData,
-                                              uti,
-                                              NULL);
+        CGImageRef image = CGImageSourceCreateImageAtIndex(src, 0, NULL);
+        CFRelease(src);
+        if (!image) return noErr;
 
-        CFRelease(uti);
+        CGSize size = CGSizeMake(CGImageGetWidth(image), CGImageGetHeight(image));
+        CGContextRef ctx = QLPreviewRequestCreateContext(preview, size, true, NULL);
+        if (ctx) {
+            CGContextDrawImage(ctx, CGRectMake(0, 0, size.width, size.height), image);
+            QLPreviewRequestFlushContext(preview, ctx);
+            CFRelease(ctx);
+        }
+
+        CGImageRelease(image);
     }
+
     return noErr;
 }
 
