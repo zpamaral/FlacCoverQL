@@ -12,6 +12,8 @@
 	<string>FlacCoverQL</string>
 	<key>CFBundlePackageType</key>
 	<string>QLGEN</string>
+	<key>CFBundleExecutable</key>
+	<string>FlacCoverQL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSupportedPlatforms</key>
