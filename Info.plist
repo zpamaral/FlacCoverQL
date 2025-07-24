@@ -53,6 +53,13 @@
 			</array>
 		</dict>
 	</array>
+	<key>QLGenerator</key>
+	<dict>
+	<key>UTIs</key>
+	<array>
+		<string>org.xiph.flac</string>
+	</array>
+	</dict>
 	<key>QLNeedsToBeRunInMainThread</key>
 	<true/>
 	<key>UTImportedTypeDeclarations</key>
